@@ -32,6 +32,8 @@ Route::get('/removeFromCart/{id}',[HomeController::class,'removeFromCart']);
 
 Route::post('/confirmOrder',[HomeController::class,'confirmOrder']);
 
+Route::post('/reservation',[HomeController::class,'reservation']);
+
 //Admin controller
 Route::get('/users',[AdminController::class,'user']);
 
@@ -46,8 +48,6 @@ Route::get('/deleteMenu/{id}',[AdminController::class,'deleteMenu']);
 Route::get('/updateView/{id}',[AdminController::class,'updateView']);
 
 Route::post('/update/{id}',[AdminController::class,'update']);
-
-Route::post('/reservation',[AdminController::class,'reservation']);
 
 Route::get('/viewReservations',[AdminController::class,'viewReservations']);
 

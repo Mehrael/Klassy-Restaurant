@@ -16,7 +16,7 @@
         <br>
         <h1>Food Menu</h1>
         <br>
-        <form action="{{url('/uploadChef')}}" method="post" enctype="multipart/form-data" style="width: 60%">
+        <form action="{{url('/uploadFood')}}" method="post" enctype="multipart/form-data" style="width: 60%">
             @csrf
             <div class="form-row">
                 <div class="col-md-6 mb-3">

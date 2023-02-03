@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Reservation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -98,6 +99,25 @@ class HomeController extends Controller
 
             $data->save();
         }
+
+        return redirect()->back();
+    }
+
+
+    public function reservation(Request $request)
+    {
+
+        $data = new reservation;
+
+        $data->name = $request->name;
+        $data->email = $request->email;
+        $data->phone = $request->phone;
+        $data->guest = $request->guest;
+        $data->date = $request->date;
+        $data->time = $request->time;
+        $data->message = $request->message;
+
+        $data->save();
 
         return redirect()->back();
     }
